@@ -89,16 +89,18 @@ function checkHasWon() {
   title.width = 400;
 
   let probability = Math.ceil(Math.random()*100);
-  if (probability > 75) {
+  if (true) {
     title.style.border = "thick solid #f7f1e5";
     document.getElementById("won").innerText = "Tell them we are coming.";
     document.body.style.backgroundColor = "#232323";
+    document.body.style.color = "#f7f1e5";
+
+    document.getElementById("won").classList.add("dark");
   } else {
     title.style.border = "thick solid #232323";
     document.getElementById("won").innerText = "Congratulations, you did it!";
     document.body.style.backgroundColor = "#f7f1e5";
   }
-  console.log(title);
   document.body.appendChild(title);
 
   document.getElementById("message").innerHTML += 

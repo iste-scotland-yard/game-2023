@@ -1,21 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap%27');
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #0c67ae;
+    color: #232323;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    width: 95vw;
-    height: 95vh;
     background-color: #f7f1e5;
+    font-family: "Lexend", sans-serif;
+    padding: 50px 0;
+}
+
+.dark {
+  font-family: 'Big Shoulders Display', sans-serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  font-weight: thin;
 }
 
 #board {
     width: 360px;
     height: 360px;
     background-color: lightblue;
-    border: 10px solid #0c67ae;
+    border: 10px solid #232323;
 
     margin: 0 auto;
     display: flex;
@@ -25,5 +34,5 @@ body {
 #board img {
     width: 88px;
     height:88px;
-    border: 1px solid #0c67ae;
+    border: 1px solid #f7f1e5;
 }
