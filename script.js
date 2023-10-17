@@ -89,7 +89,7 @@ function checkHasWon() {
   title.width = 400;
 
   let probability = Math.ceil(Math.random()*100);
-  if (true) {
+  if (probability > 75) {
     title.style.border = "thick solid #f7f1e5";
     document.getElementById("won").innerText = "Tell them we are coming.";
     document.body.style.backgroundColor = "#232323";
