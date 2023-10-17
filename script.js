@@ -74,8 +74,6 @@ function checkHasWon() {
       counter++;
     }
   }
-
-  document.getElementById("won").innerText = "Hurray! You won!";
   
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < cols; c++) {
@@ -85,10 +83,32 @@ function checkHasWon() {
     }
   }
   document.getElementById("board").remove();
-  document.getElementById("title").style.visibility = "visible";
+
+  let title = document.createElement("img");
+  title.src = "Images/result.png";
+  title.width = 400;
+
+  let probability = Math.ceil(Math.random()*100);
+  if (probability > 75) {
+    title.style.border = "thick solid #f7f1e5";
+    document.getElementById("won").innerText = "Tell them we are coming.";
+    document.body.style.backgroundColor = "#232323";
+  } else {
+    title.style.border = "thick solid #232323";
+    document.getElementById("won").innerText = "Congratulations, you did it!";
+    document.body.style.backgroundColor = "#f7f1e5";
+  }
+  console.log(title);
+  document.body.appendChild(title);
+
+  document.getElementById("message").innerHTML += 
+    "<br>You've got the message- now find out if you've done it best: " + 
+    "<br> 1. Screenshot this page" +
+    "<br> 2. Tag @istenitk" +
+    "<br> 3. Post it on your Instagram story";
 }
 
-let imgOrder = original;
+let imgOrder = shuffle(original);
 
 for (let r=0; r < rows; r++) {
   for (let c=0; c < cols; c++) {
