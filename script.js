@@ -108,7 +108,7 @@ function checkHasWon() {
     "<br> 3. Post it on your Instagram story";
 }
 
-let imgOrder = original;
+let imgOrder = shuffle(original);
 
 for (let r=0; r < rows; r++) {
   for (let c=0; c < cols; c++) {
