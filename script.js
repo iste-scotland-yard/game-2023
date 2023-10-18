@@ -106,8 +106,7 @@ function checkHasWon() {
   document.getElementById("message").innerHTML += 
     "<br>You've got the message- now find out if you've done it best: " + 
     "<br> 1. Screenshot this page" +
-    "<br> 2. Tag @istenitk" +
-    "<br> 3. Post it on your Instagram story to get featured by us.";
+    "<br> 2. DM the screenshot to @istenitk on Instagram to get featured by us.";
 }
 
 let imgOrder = shuffle(original);
